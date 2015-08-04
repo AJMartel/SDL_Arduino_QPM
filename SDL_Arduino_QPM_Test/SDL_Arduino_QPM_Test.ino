@@ -91,13 +91,15 @@ while (1)
     Serial.println("----------------");
     // turn on I07 too
     QuadPower.writeGPIO(0x80);
-
+    Serial.println("Turn on LSW0");
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO0, QuadPower_ON);
     delay(3000);
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO0, QuadPower_OFF);
+        Serial.println("Turn on LSW1");
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO1, QuadPower_ON);
     delay(3000);
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO1, QuadPower_OFF);
+        Serial.println("Turn on LSW2");
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO2, QuadPower_ON);
     delay(3000);
     
@@ -105,6 +107,7 @@ while (1)
     QuadPower.writeGPIO(0x00);
     
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO2, QuadPower_OFF);
+    Serial.println("Turn on LSW3");
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO3, QuadPower_ON);
     delay(3000);
     QuadPower.setPowerChannel(QuadPower_POWER_CHANNEL_IO3, QuadPower_OFF);
